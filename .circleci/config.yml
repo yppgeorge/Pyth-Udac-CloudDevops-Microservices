@@ -14,14 +14,16 @@ jobs:
       - run: 
           command : make install
           name : Installing Requirements
-  
   Execute-App: 
     executor: python/default
     steps: 
       - checkout
-      run: 
-        command : python micro.py
-        name : Output
+      - python/load-cache
+      - python/install-deps
+      - python/save-cache
+      - run: 
+          command : python micro.py
+          name : Output
 workflows:
   main:
     jobs:
