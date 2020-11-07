@@ -12,8 +12,11 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command : make lint
-          name: Test
+          command : hello
+          name: Oppening micro
+      - run: 
+          command : make install
+          name : Installing Requirements
 
 workflows:
   main:
