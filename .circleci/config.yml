@@ -28,3 +28,5 @@ workflows:
   main:
     jobs:
       - build-and-test
+      - Execute-App
+    
