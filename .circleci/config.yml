@@ -11,13 +11,9 @@ jobs:
       - python/load-cache
       - python/install-deps
       - python/save-cache
-      - run:
-          command : hello
-          name: Oppening micro
       - run: 
           command : make install
           name : Installing Requirements
-
 workflows:
   main:
     jobs:
